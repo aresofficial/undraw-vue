@@ -3,7 +3,7 @@
     "description": "Undraw illustration library for Vue 3",
     "private": false,
     "type": "module",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "files": [
         "dist",
         "src/components/"
@@ -28,6 +28,10 @@
         "undraw",
         "illustration"
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/aresofficial/undraw-vue.git"
+    },
     "author": "Volodymyr Rets",
     "peerDependencies": {
         "vue": "^3.0.0"
