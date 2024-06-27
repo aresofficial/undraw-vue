@@ -7,6 +7,8 @@ const props = withDefaults(defineProps<UndrawIllustrationProps & { name: Illustr
   size: '100%',
 });
 
+const slots = defineSlots<{ loading() : any }>()
+
 const component = defineAsyncComponent(async () => {
   try {
     const { default: importedComponent } = await import(`../illustrations/${props.name}.vue`);
@@ -19,11 +21,18 @@ const component = defineAsyncComponent(async () => {
 </script>
 
 <template>
-  <component 
-    v-if="component !== null"
-    :is="component"
-    :color="color"
-    :size="size"
-    :style="style" 
-  />
+  <Suspense>
+    <template #default>
+      <component 
+        v-if="component !== null"
+        :is="component"
+        :color="color"
+        :size="size"
+        :style="style" 
+      />
+    </template>
+    <template #fallback>
+      <slot name="loading" />
+    </template>
+  </Suspense>
 </template>
