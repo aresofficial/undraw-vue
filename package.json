@@ -3,7 +3,7 @@
     "description": "Undraw illustration library for Vue 3",
     "private": false,
     "type": "module",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "files": [
         "dist",
         "src/components/"

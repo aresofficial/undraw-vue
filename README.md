@@ -12,7 +12,7 @@ import { UndrawIllustration } from 'undraw-vue';
 <template>
   <UndrawIllustration
     name="Done"
-    width="15rem"
+    size="15rem"
     color="var(--primary-color)"
   />
 </template>
@@ -23,7 +23,7 @@ import { UndrawIllustration } from 'undraw-vue';
 | Name    | Required | Default   | Description                                 |
 |---------|----------|-----------|---------------------------------------------|
 | `name`  | **yes**  | -         | Illustration name (see `Illustration` type) |
-| `width` | no       | `100%`    | Illustration width                          |
+| `size ` | no       | `100%`    | Illustration size (height)                  |
 | `color` | no       | `#6D07E8` | Illustration accent color                   |
 | `style` | no       | -         | Illustration CSS styles                     |
 
